@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Flex Box</title>
+    <style>
+      .container {
+        display: flex;
+        flex-wrap: wrap;
+        border: 1px solid red;
+      }
+      .box {
+        margin: 10px;
+        height: 380px;
+        width: 360px;
+        border: 1px solid #000;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="box">
+        <h1>Signup</h1>
+        <form method="post">
+          <input type="text" placeholder="Enter name" /><br /><br />
+          <input
+            type="email"
+            placeholder="Enter email"
+            name="user_name"
+            id="user_name"
+          /><br /><br />
+          <input
+            type="password"
+            placeholder="Enter password"
+            name="user_pwd"
+            id="user_pwd"
+          /><br /><br />
+          <textarea
+            rows="6"
+            cols="36"
+            placeholder="Enter address"
+            name="user_addr"
+            id="user_addr"
+          ></textarea>
+          <select  name="user_country" id="user_country">
+            <option>Select Country</option>
+            <option>USA</option>
+            <option>UK</option>
+            <option>India</option>
+            <option>Japan</option>
+          </select>
+          <br /><br />
+          <button name="submit_btn" id="submit_btn">Submit</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
