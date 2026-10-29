@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <select id="weekday" onchange="fn()">
+      <option value="">Select Weekday</option>
+      <option value="mon">Monday</option>
+      <option value="tue">Tuesday</option>
+      <option value="wed">Wednesday</option>
+      <option value="thru">Thrusday</option>
+      <option value="fri">Friday</option>
+      <option value="sat">Saturday</option>
+      <option value="sun">Sunday</option>
+    </select>
+    <div id="result"></div>
+    <script>
+      let fn = function () {
+        let wd = document.getElementById("weekday").value;
+        let elem = document.getElementById("result");
+        if (wd === "mon") {
+          elem.innerHTML = `<h1>This is first day of week<h1>`;
+        } else if (wd === "tue") {
+          elem.innerHTML = `<h1>This is second day of week<h1>`;
+        } else if (wd === "wed") {
+          elem.innerHTML = `<h1>This is third day of week<h1>`;
+        } else if (wd === "thru") {
+          elem.innerHTML = `<h1>This is fourth day of week<h1>`;
+        } else if (wd === "fri") {
+          elem.innerHTML = `<h1>This is fifth day of week<h1>`;
+        } else if (wd === "sat") {
+          elem.innerHTML = `<h1>This is Saturday...weekend<h1>`;
+        } else if (wd === "sun") {
+          elem.innerHTML = `<h1>This is sunday <h1>`;
+        }else{
+            elem.innerHTML = `<h1>Select option from drop down</h1>`
+        }
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conditional Statements</title>
+</head>
+<body>
+    <h1>Check Condition</h1>
+    <a href="">Click here</a>
+    <input type="number" id="usr_inp" placeholder="Enter number" />
+    <button onclick="chkOddEven()">Click</button>
+    <div id="result"></div>
+    <script>
+        //Anonymous function
+        let chkOddEven = function(){
+            let num = document.getElementById("usr_inp").value
+            if(num%2 === 0){
+                document.getElementById("result").innerHTML = `<h1>${num} is even number</h1>`
+            }else{
+                document.getElementById("result").innerHTML = `<h1>${num} is odd number</h1>`
+            }
+        }
+    </script>
+</body>
+</html>
