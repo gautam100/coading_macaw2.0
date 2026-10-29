@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive</title>
+    <style>
+        .container{
+            display: flex;
+            flex-wrap:wrap;
+        }
+        .box{
+            width:500px;
+            height: 500px;
+            border:1px solid #000;
+            margin: 10px;
+            padding: 10px;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Web Form</h1>
+            <form method="get">
+                <input type="text" placeholder="Enter name" name="user_name" />
+                <br /><br />
+                <input type="email" placeholder="Enter email" name="user_email" />
+                <br /><br />
+                <input type="password" placeholder="Enter password" name="user_pwd" />
+                <br /><br />
+                <textarea placeholder="Enter address" rows="6" cols="36" name="user_addr"></textarea>
+                <br /><br />
+                <select name="user_country">
+                    <option value="">Select Country</option>
+                    <option value="us" selected>USA</option>
+                    <option value="uk">UK</option>
+                    <option value="ind">India</option>
+                    <option value="jp">Japan</option>
+                </select>
+                <br /><br />
+                 <input type="radio" name="gender" value="male"> Male
+                 <input type="radio" name="gender" value="female" checked> Female
+                <br /><br />
+                <input type="checkbox" name="hobby" value="gardening">Gardening
+                <input type="checkbox" name="hobby" value="cooking">Cooking
+                <input type="checkbox" name="hobby" value="reading">Reading
+                <br /><br />
+                <button name="submit_btn">Signup!</button>
+
+            </form>
+        </div>
+        
+    </div>
+</body>
+</html>
