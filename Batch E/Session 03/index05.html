@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Loop</title>
+  </head>
+  <body onload="loop1()">
+    <h1>Loop</h1>
+    <ul>
+      <li>For</li>
+      <li>While</li>
+      <li>do While</li>
+    </ul>
+    <script>
+      function loop1() {
+        for (let a=1; a<=7; a++) {
+          console.log(a);
+        }
+        console.log("---------------")
+        for(let a=7; a>=1; a--){
+            console.log(a)
+        }
+        console.log("---------------")
+        //a+=2 means a=a+2
+        for(let a=2; a<11; a+=2){
+            console.log(a)
+        }
+      }
+    </script>
+  </body>
+</html>

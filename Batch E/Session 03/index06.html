@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <input type="number" id="usr_inp" placeholder="Enter number" />
+    <button onclick="prnTable()">Click</button>
+    <div id="result"></div>
+    <script>
+        function prnTable(){
+            let num = document.getElementById("usr_inp").value
+            let html=""
+            let tab = 1
+            //debugger
+            for(let i=1; i<=10; i++){
+                tab = num*i
+                html += `${num} X ${i} = ${tab}<br />`
+            }
+            document.getElementById("result").innerHTML = html
+        }
+    </script>
+</body>
+</html>
