@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" id="usr_inp" placeholder="Enter Number" />
+    <button onclick="chkEvenOdd()">Click</button>
+    <div id="result"></div>
+    <script>
+        //Anonymous function
+        let chkEvenOdd = function(){
+            let num = document.getElementById("usr_inp").value
+            if(num%2 === 0){
+                document.getElementById("result").innerHTML = `${num} is even number`
+            }else{
+                document.getElementById("result").innerHTML = `${num} is odd number`
+            }
+        }
+    </script>
+</body>
+</html>
