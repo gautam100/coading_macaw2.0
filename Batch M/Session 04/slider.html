@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <style>
+        .slider-box{
+            width: 280px;
+            height:340px;
+            border:5px solid #000;
+        }
+        .outer-margin{
+            margin:10px 20px;
+        }
+    </style>
+</head>
+<body onload="slider01()">
+    <div class="slider-box outer-margin" id="slider">
+        ...
+    </div>
+    <div class="outer-margin">
+        <button onclick="prevImg()"> << Prev</button>
+        <button onclick="nextImg()"> Next >> </button>
+    </div>
+    <script src="slider.js"></script>
+</body>
+</html>
