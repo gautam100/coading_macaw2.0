@@ -1,3 +1,4 @@
+import Counter from "./component/Counter"
 import State from "./component/State"
 import User from "./component/User"
 
@@ -9,6 +10,8 @@ function App() {
       <User />
       <hr />
       <State />
+      <hr />
+      <Counter />
     </>
   )
 }
