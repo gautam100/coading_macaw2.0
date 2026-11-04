@@ -13,13 +13,30 @@ app.get("/", (req, res) => {
 
 //Fetch all records
 app.get("/api/employee", (req, resp) => {
-    connection.query("SELECT * FROM employees",(err, result)=>{
-        if(err){
-            resp.status(404).json({msg: "Error in SQL"})
-        }else{
-            resp.status(200).json( {msg: result})
-        }
-    })
+  connection.query("SELECT * FROM employees", (err, result) => {
+    if (err) {
+      resp.status(404).json({ msg: "Error in SQL" });
+    } else {
+      resp.status(200).json({ msg: result });
+    }
+  });
+});
+
+//Save record
+app.post("/api/employee", (req, res) => {
+  let body = req.body;
+  connection.query(
+    `INSERT INTO employees(emp_name, emp_age, emp_salary, emp_department) VALUES ('${body.name}','${body.age}','${body.salary}','${body.department}')`,
+    (err, result) => {
+      if (err) {
+        return res.status(404).json({ msg: `Error in SQL: ${err}` });
+      } else {
+        return res
+          .status(200)
+          .json({ msg: "One record inserted successfully!" });
+      }
+    },
+  );
 });
 
 app.listen(3000, () => {
