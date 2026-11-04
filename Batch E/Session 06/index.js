@@ -22,6 +22,21 @@ app.get("/api/employee", (req, resp) => {
   });
 });
 
+//Fetch single record
+app.get("/api/employee/:id", (req, res) => {
+  let empId = req.params.id;
+  connection.query(
+    `SELECT * FROM employees WHERE emp_id = ${empId}`,
+    (err, result) => {
+        if(err){
+            res.status(404).json({msg: "Error in SQL"})
+        }else{
+            res.status(200).json({msg: result})
+        }
+    },
+  );
+});
+
 //Save record
 app.post("/api/employee", (req, res) => {
   let body = req.body;
@@ -34,6 +49,23 @@ app.post("/api/employee", (req, res) => {
         return res
           .status(200)
           .json({ msg: "One record inserted successfully!" });
+      }
+    },
+  );
+});
+
+//Delete record
+app.delete("/api/employee/:id", (req, res) => {
+  let id = req.params.id;
+  connection.query(
+    `DELETE FROM employees WHERE emp_id = ${id}`,
+    (err, result) => {
+      if (err) {
+        return res.status(404).json({ msg: err });
+      } else {
+        return res
+          .status(200)
+          .json({ msg: `Record having id: ${id} is deleted successfully!` });
       }
     },
   );
